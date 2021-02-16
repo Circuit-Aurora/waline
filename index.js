@@ -12,19 +12,6 @@ module.exports = Waline({
     '毛泽东'
   ]
 
-  disallowIPList: [
-    '177.18.2.206',
-    '200.186.145.218',
-    '117.41.183.100',
-    '208.68.88.54',
-    '123.30.180.135',
-    '61.147.103.160',
-    '218.108.0.73',
-    '42.228.8.196',
-    '81.94.193.29',
-    '199.193.71.80'
-  ]
-
   async preSave(comment) {
     const isSapm = await Akismet.check(comment);
     if(isSpam) {
