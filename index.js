@@ -1,2 +1,5 @@
 const Waline = require('@waline/vercel');
-module.exports = Waline();
+
+module.exports = Waline({
+  secureDomains: 'circuit-aurora.github.io'
+});
